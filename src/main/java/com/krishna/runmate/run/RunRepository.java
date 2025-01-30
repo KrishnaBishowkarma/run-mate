@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class RunRepository {
@@ -16,11 +17,10 @@ public class RunRepository {
         return runs;
     }
 
-    Run findById(int id) {
+    Optional<Run> findById(int id) {
         return runs.stream()
                 .filter(run -> run.id() == id)
-                .findFirst()
-                .get();
+                .findFirst();
     }
 
     @PostConstruct
