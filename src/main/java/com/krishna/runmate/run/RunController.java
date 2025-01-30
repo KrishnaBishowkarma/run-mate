@@ -49,4 +49,9 @@ public class RunController {
     }
 
     // HTTP DELETE method to delete a run
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{requestedId}")
+    void delete(@PathVariable Integer requestedId) {
+        runRepository.delete(requestedId);
+    }
 }
