@@ -42,6 +42,11 @@ public class RunController {
     }
 
     // HTTP PUT method to update an existing run
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{requestedId}")
+    void update(@RequestBody Run run, @PathVariable Integer requestedId) {
+        runRepository.update(run, requestedId);
+    }
 
     // HTTP DELETE method to delete a run
 }
