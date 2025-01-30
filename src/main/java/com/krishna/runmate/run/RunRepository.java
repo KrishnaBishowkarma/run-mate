@@ -16,6 +16,13 @@ public class RunRepository {
         return runs;
     }
 
+    Run findById(int id) {
+        return runs.stream()
+                .filter(run -> run.id() == id)
+                .findFirst()
+                .get();
+    }
+
     @PostConstruct
     private void init() {
         runs.add(new Run(1,

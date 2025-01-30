@@ -20,4 +20,9 @@ public class RunController {
     List<Run> findAll() {
         return runRepository.findAll();
     }
+
+    @GetMapping("/1")
+    Run findById() {
+        return runRepository.findById(1);
+    }
 }
