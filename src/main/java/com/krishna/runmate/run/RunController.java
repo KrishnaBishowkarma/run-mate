@@ -1,6 +1,7 @@
 package com.krishna.runmate.run;
 
 import com.krishna.runmate.exceptions.RunNotFoundException;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -38,14 +39,14 @@ public class RunController {
     // HTTP POST method to create a new run
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void create(@RequestBody Run run) {
+    void create(@Valid @RequestBody Run run) {
         runRepository.create(run);
     }
 
     // HTTP PUT method to update an existing run
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{requestedId}")
-    void update(@RequestBody Run run, @PathVariable Integer requestedId) {
+    void update(@Valid @RequestBody Run run, @PathVariable Integer requestedId) {
         runRepository.update(run, requestedId);
     }
 
