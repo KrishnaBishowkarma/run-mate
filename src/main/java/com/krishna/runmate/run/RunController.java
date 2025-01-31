@@ -1,5 +1,6 @@
 package com.krishna.runmate.run;
 
+import com.krishna.runmate.exceptions.RunNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -28,7 +29,7 @@ public class RunController {
     Run findById(@PathVariable Integer requestedId) {
         Optional<Run> run = runRepository.findById(requestedId);
         if (run.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Run not found");
+            throw new RunNotFoundException();
         }
         return run.get();
     }
