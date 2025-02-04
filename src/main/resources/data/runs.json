@@ -1,7 +1,7 @@
 {
   "runs": [
     {
-      "id": 1,
+      "id": 2,
       "title": "Morning Run",
       "startedOn": "2021-01-02T06:30:00",
       "completedOn": "2021-01-02T07:15:00",
@@ -9,7 +9,7 @@
       "location": "OUTDOOR"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Evening Jog",
       "startedOn": "2021-01-03T18:00:00",
       "completedOn": "2021-01-03T18:40:00",
@@ -17,7 +17,7 @@
       "location": "OUTDOOR"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Lunch Break Sprint",
       "startedOn": "2021-01-04T12:15:00",
       "completedOn": "2021-01-04T12:35:00",
@@ -25,15 +25,15 @@
       "location": "INDOOR"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Sunset Run",
       "startedOn": "2021-01-05T19:00:00",
       "completedOn": "2021-01-05T19:45:00",
-      "miles": 5.0,
+      "miles": 5,
       "location": "OUTDOOR"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Park Jog",
       "startedOn": "2021-01-06T07:30:00",
       "completedOn": "2021-01-06T08:00:00",
@@ -41,7 +41,7 @@
       "location": "OUTDOOR"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Treadmill Run",
       "startedOn": "2021-01-07T17:00:00",
       "completedOn": "2021-01-07T17:30:00",
@@ -49,7 +49,7 @@
       "location": "INDOOR"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Trail Run",
       "startedOn": "2021-01-08T08:15:00",
       "completedOn": "2021-01-08T09:10:00",
@@ -57,7 +57,7 @@
       "location": "OUTDOOR"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Quick Sprint",
       "startedOn": "2021-01-09T15:45:00",
       "completedOn": "2021-01-09T16:05:00",
@@ -65,15 +65,15 @@
       "location": "INDOOR"
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "Late Night Jog",
       "startedOn": "2021-01-10T22:00:00",
       "completedOn": "2021-01-10T22:30:00",
-      "miles": 3.0,
+      "miles": 3,
       "location": "OUTDOOR"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "Hill Run",
       "startedOn": "2021-01-11T05:45:00",
       "completedOn": "2021-01-11T06:30:00",
