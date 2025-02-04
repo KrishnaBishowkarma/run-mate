@@ -31,14 +31,14 @@ public class RunRepository {
     }
 
     public void create(Run run) {
-        var update = jdbcClient.sql("INSERT INTO Run (id, title, startedOn, completedOn, miles, location) values (?, ?, ?, ?, ?, ?)")
+        var update = jdbcClient.sql("INSERT INTO Run (id, title, started_on, completed_on, miles, location) values (?, ?, ?, ?, ?, ?)")
                 .params(List.of(run.id(), run.title(), run.startedOn(), run.completedOn(), run.miles(), run.location().toString()))
                 .update();
         Assert.state(update == 1, "Failed to insert run" + run.title());
     }
 
     public void update(Run run, Integer requestedId) {
-        var update = jdbcClient.sql("UPDATE run SET title = ?, startedOn = ?, completedOn = ?, miles = ?, location = ? WHERE id = ?")
+        var update = jdbcClient.sql("UPDATE run SET title = ?, started_on = ?, completed_on = ?, miles = ?, location = ? WHERE id = ?")
                 .params(List.of(run.title(), run.startedOn(), run.completedOn(), run.miles(), run.location().toString(), requestedId))
                 .update();
         Assert.state(update == 1, "Failed to update run " + run.title());
