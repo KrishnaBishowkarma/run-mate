@@ -1,6 +1,6 @@
-CREATE TABLE IF NOT EXISTS Run
+CREATE TABLE IF NOT EXISTS run
 (
-    id           INT          NOT NULL,
+    id           SERIAL       NOT NULL,
     title        VARCHAR(255) NOT NULL,
     started_on   TIMESTAMP    NOT NULL,
     completed_on TIMESTAMP    NOT NULL,
