@@ -31,7 +31,7 @@ public class RunRepository {
     }
 
     public void create(Run run) {
-        var update = jdbcClient.sql("INSERT INTO Run (id, title, started_on, completed_on, miles, location) values (?, ?, ?, ?, ?, ?)")
+        var update = jdbcClient.sql("INSERT INTO run (id, title, started_on, completed_on, miles, location) values (?, ?, ?, ?, ?, ?)")
                 .params(List.of(run.id(), run.title(), run.startedOn(), run.completedOn(), run.miles(), run.location().toString()))
                 .update();
         Assert.state(update == 1, "Failed to insert run" + run.title());
@@ -52,8 +52,9 @@ public class RunRepository {
     }
 
     public int count() {
-        return jdbcClient.sql("SELECT * FROM run")
-                .query().listOfRows().size();
+        return jdbcClient.sql("SELECT COUNT(*) FROM run")
+                .query(Integer.class)
+                .single();
     }
 
     public void saveAll(List<Run> runs) {

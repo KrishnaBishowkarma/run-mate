@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres'
+    container_name: 'postgres'
+    environment:
+      - 'POSTGRES_DB=runmate'
+      - 'POSTGRES_PASSWORD=admin'
+      - 'POSTGRES_USER=krishna'
+    ports:
+      - '5432:5432'
